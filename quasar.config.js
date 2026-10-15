@@ -166,17 +166,18 @@ export default defineConfig((/* ctx */) => {
 
     // https://v2.quasar.dev/quasar-cli-vite/developing-pwa/configuring-pwa
     pwa: {
-      workboxMode: 'GenerateSW', // 'GenerateSW' or 'InjectManifest'
-      // swFilename: 'sw.js',
-      // manifestFilename: 'manifest.json',
-      // extendPWAManifestJson (json) {},
-      // useCredentialsForManifestTag: true,
-      // injectPWAMetaTags: false,
-      // extendPWACustomSWConf (rolldownConf) {},
-      // extendPWAGenerateSWOptions (cfg) {},
-      // extendPWAInjectManifestOptions (cfg) {},
-      // extendPWASwTsConfig (tsConfig) {}
-    },
+  workboxMode: 'GenerateSW',
+  manifest: {
+    name: 'Fecha Caixa',
+    short_name: 'Fecha Caixa',
+    description: 'Jogo de Pontos e Caixas',
+    display: 'standalone',
+    orientation: 'portrait',
+    background_color: '#ff5f57',
+    theme_color: '#ff5f57'
+  }
+},
+
 
     // https://v2.quasar.dev/quasar-cli-vite/developing-cordova-apps/configuring-cordova
     cordova: {},
